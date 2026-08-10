@@ -10,3 +10,8 @@ def matches(item, chunk):
             if w.lower() not in text:
                 return False
         return True
+    if "must_contain_one_of" in item:
+        for w in item["must_contain_one_of"]:
+            if w.lower() in text:
+                return True
+        return False
