@@ -7,8 +7,10 @@ def chunk_text(text, size=200):
     current = []
     total = 0
     for item in sentences:
+        if not item.strip():
+            continue
         if total + count_words(item) > size:
-            chunks.append(". ".join(current))
+            chunks.append(". ".join(current) + ".")
             current = []
             total = 0
 
@@ -16,7 +18,7 @@ def chunk_text(text, size=200):
         total = total + count_words(item)
 
     if current:
-        chunks.append(". ".join(current))
+        chunks.append(". ".join(current) + ".")
 
 
     return chunks
