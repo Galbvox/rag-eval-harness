@@ -18,6 +18,10 @@ jobs:
           python-version: '3.11'
       - name: Install deps
         run: pip install -r requirements.txt
+      - name: Install package
+        run: pip install -e .
+      - name: Run tests
+        run: pytest
       - name: Python version
         run: python --version
 
