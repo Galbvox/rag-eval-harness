@@ -9,6 +9,8 @@ def chunk_text(text, size=200):
     for item in sentences:
         if not item.strip():
             continue
+        if count_words(item) > size:
+            raise ValueError("sentence longer than size")
         if total + count_words(item) > size:
             chunks.append(". ".join(current) + ".")
             current = []

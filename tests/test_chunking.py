@@ -8,3 +8,9 @@ def test_ends_with_period():
     chunks = chunk_text("First one. Second one.")
     for c in chunks:
         assert c.endswith(".")
+
+import pytest
+
+def test_long_sentence_raises():
+    with pytest.raises(ValueError):
+        chunk_text("one two three four five", size=3)
