@@ -1,4 +1,4 @@
-from rag_eval.scoring import score
+from rag_eval.scoring import score, passed
 
 items = [
         {"query": "How long will the delivery take?",
@@ -11,4 +11,19 @@ def fake_search(query, k):
 def test_score_counts_hits():  
     hits, total = score(items, fake_search)
     assert hits == 1
+    
+def test_score_Success():  
+    test = passed(3, 3, 0.6)
+    assert test is True
+
+def test_score_Failed():  
+    test = passed(1, 3, 0.6)
+    assert test is False
+
+import pytest
+    
+def test_score_raise():  
+    with pytest.raises(ValueError):
+        passed(0, 0, 0.6)
+
     

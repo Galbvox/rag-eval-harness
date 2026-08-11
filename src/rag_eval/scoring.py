@@ -1,3 +1,5 @@
+import sys
+
 from rag_eval.matching import matches
 # [
 #     {"query": "what is the return policy?", "must_contain": ["refunds", "unused"]},
@@ -19,4 +21,12 @@ def score(items, search_fn, k=3) -> tuple:
             
     print(f"recall@{k}: {hits}/{total}")
     return hits,total
+
+def passed(hits, total, min_score):
+   if total == 0:
+    raise ValueError("empty golden set")
+   
+   rat = hits / total  
+   return rat >= min_score
+    
     
