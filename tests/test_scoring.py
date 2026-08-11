@@ -1,3 +1,5 @@
+
+import pytest
 from rag_eval.scoring import score, passed
 
 items = [
@@ -20,7 +22,6 @@ def test_score_Failed():
     test = passed(1, 3, 0.6)
     assert test is False
 
-import pytest
     
 def test_score_raise():  
     with pytest.raises(ValueError):
