@@ -8,10 +8,14 @@ def matches(item, chunk):
     if "must_contain" in item:
         for w in item["must_contain"]:
             if w.lower() not in text:
-                return False
+                return False            
         return True
-    if "must_contain_one_of" in item:
+    elif "must_contain_one_of" in item:
         for w in item["must_contain_one_of"]:
             if w.lower() in text:
                 return True
         return False
+    else:
+        return False
+
+ 
