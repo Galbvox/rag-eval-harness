@@ -1,0 +1,6 @@
+[
+    {"query": "what is the return policy?", "must_contain": ["refunds", "unused"]},
+    {"query": "What kind of warranty does it come with?", "must_contain": ["Warranty", "serial", "number"]},
+    {"query": "How long will the delivery take?", "must_contain": ["Delivery", "days"]}
+
+]
