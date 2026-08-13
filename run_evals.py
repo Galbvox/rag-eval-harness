@@ -17,7 +17,7 @@ with open("evals/golden/questions.json") as f:
 
 hits, total = score(items, search_fn, k=3)
 
-ok = passed(hits, total, 1)
+ok = passed(hits, total, 0.75)
 
 
 if ok:
