@@ -24,4 +24,6 @@ jobs:
         run: pytest
       - name: Python version
         run: python --version
+      - name: Run evals
+        run: python run_evals.py
 
