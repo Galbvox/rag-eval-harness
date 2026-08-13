@@ -16,7 +16,7 @@ def make_search(chunks):
                        break
             
             scored.append((count, chunk))
-        scored.sort(reverse=True)
+        scored.sort(key=lambda pair: pair[0], reverse=True)
         result = [chunk for count, chunk in scored[:k]]
         return result
     return search

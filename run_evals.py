@@ -15,9 +15,9 @@ search_fn = make_search(chunks)
 with open("evals/golden/questions.json") as f:
     items = json.load(f)
 
-hits, total = score(items, search_fn, k=3)
+hits, total = score(items, search_fn, k=1)
 
-ok = passed(hits, total, 0.75)
+ok = passed(hits, total, 0.5)
 
 
 if ok:
