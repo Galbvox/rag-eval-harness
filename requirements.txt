@@ -1,4 +1,3 @@
 pytest
 python-dotenv
 psycopg[binary]
-sentence-transformers
