@@ -1,8 +1,3 @@
-from dotenv import load_dotenv
-
-from rag_eval.chunking import chunk_text
-
-load_dotenv(override=True)
 
 
 def make_vector_search(conn, model):
