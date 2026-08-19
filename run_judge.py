@@ -1,3 +1,5 @@
+#Before release
+#Are the answers themselves correct
 import os
 from dotenv import load_dotenv
 import psycopg

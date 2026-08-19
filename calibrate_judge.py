@@ -1,3 +1,6 @@
+#When invoking the judge model
+#Does the judge itself still distinguish?
+
 import os
 from dotenv import load_dotenv
 import psycopg

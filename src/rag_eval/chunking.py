@@ -1,6 +1,4 @@
 
-
-
 def chunk_text(text, size=200):
     sentences = text.split(".")
     chunks = []

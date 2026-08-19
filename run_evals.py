@@ -1,3 +1,7 @@
+#All push
+#Does the system still find the right section?
+#Optional breakpoint: Change in matching or chunk_text
+
 import sys
 from rag_eval.chunking import chunk_text
 from rag_eval.search import make_search
