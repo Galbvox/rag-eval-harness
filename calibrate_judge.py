@@ -10,9 +10,7 @@ from anthropic import Anthropic
 from sentence_transformers import SentenceTransformer
 
 from rag_eval.vector_search import make_vector_search
-from rag_eval.generation import make_generator
 from rag_eval.judge import make_judge
-
 
 load_dotenv(override=True)
 
