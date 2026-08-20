@@ -1,4 +1,4 @@
-IGNORED = ["the", "is", "that", "a", "of", "what"]
+IGNORED = ["the", "is", "that", "a", "of", "what", "with", "it", "do"]
 
 def make_search(chunks):
     def search(query, k):
